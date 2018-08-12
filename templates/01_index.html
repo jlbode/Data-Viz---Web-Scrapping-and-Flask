@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Info</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+
+<body>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Mars Info</h2>
+        <p>When you click the button, we scrape the web for updated information on mars</p>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update mars info! &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      
+        <div class="row">
+
+            <!-- Col 1 Most recent news -->
+            <div class="col-md-4">
+            <h3>Most recent news</h3>
+            <h4>{{ mars_info.news_title }}</h4>
+            <p>{{ mars_info.news_text }} </p>
+            </div>
+
+            <!-- Col 2 Mars Facts-->
+            <div class="col-md-4">
+                <h3>Mars Facts</h3>
+                <table class="table">
+                    <tbody>
+                        <tr style="text-align: right;">
+                            <td>{{ mars_info.mars_facts.Metric[0] }}</td>
+                            <td>{{ mars_info.mars_facts.Value[0] }}</td>
+                        </tr>
+                        <tr style="text-align: right;">
+                                <td>{{ mars_info.mars_facts.Metric[1] }}</td>
+                                <td>{{ mars_info.mars_facts.Value[1] }}</td>
+                        </tr>
+                        <tr style="text-align: right;">
+                                <td>{{ mars_info.mars_facts.Metric[2] }}</td>
+                                <td>{{ mars_info.mars_facts.Value[2] }}</td>
+                        </tr>
+                        <tr style="text-align: right;">
+                                <td>{{ mars_info.mars_facts.Metric[3] }}</td>
+                                <td>{{ mars_info.mars_facts.Value[3] }}</td>
+                        </tr>
+                        <tr style="text-align: right;">
+                                <td>{{ mars_info.mars_facts.Metric[4] }}</td>
+                                <td>{{ mars_info.mars_facts.Value[4] }}</td>
+                        </tr>
+                        <tr style="text-align: right;">
+                                <td>{{ mars_info.mars_facts.Metric[5] }}</td>
+                                <td>{{ mars_info.mars_facts.Value[5] }}</td>
+                        </tr>
+                        <tr style="text-align: right;">
+                                <td>{{ mars_info.mars_facts.Metric[6] }}</td>
+                                <td>{{ mars_info.mars_facts.Value[6] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Col 3 Mars Hemisphere 1 -->
+            <div class="col-md-4">
+                <h4>{{ mars_info.hemi_urls[0].title }}</h4>
+                <img src = {{ mars_info.hemi_urls[0].url }} width="250" height="250" >
+            </div>
+        </div>
+
+        <!-- Row 3 - All pictures       -->
+        <div class="row">
+
+            <!-- Col 1 Mars Hemisphere 2 -->
+            <div class="col-md-4">
+                <h4>{{ mars_info.hemi_urls[1].title }}</h4>
+                <img src = {{ mars_info.hemi_urls[1].url }} width="250" height="250" >
+            </div>
+           
+            <!-- Col 2 Mars Hemisphere 3 -->
+            <div class="col-md-4">
+                    <h4>{{ mars_info.hemi_urls[2].title }}</h4>
+                    <img src = {{ mars_info.hemi_urls[2].url }} width="250" height="250" >
+                </div>
+           
+            <!-- Col 3 Mars Hemisphere 4 -->
+            <div class="col-md-4">
+                    <h4>{{ mars_info.hemi_urls[3].title }}</h4>
+                    <img src = {{ mars_info.hemi_urls[3].url }} width="250" height="250" >
+            </div>
+        </div>                       
+        <hr>
+
+        <footer>
+        <p>&copy; 2018 Josh Bode</p>
+        </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+
+
+
+</html>
+
